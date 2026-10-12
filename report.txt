@@ -2,7 +2,7 @@
 ============================================================
   LIBRARY DATA PIPELINE
   Starting pipeline execution...
-  Time: 2026-07-28 16:29:12
+  Time: 2026-10-12 15:29:44
 ============================================================
 
 ============================================================
@@ -29,7 +29,7 @@ Raw data:
   - Found 269 invalid ISBNs
 
 [6/6] Saving cleaned data...
-  [OK] Saved to: data/silver/circulation_clean.csv
+  [OK] Saved to: data\silver\circulation_clean.csv
 
 Cleaned data:
   - Rows: 5,100
@@ -52,7 +52,7 @@ Raw data:
 [2/3] Handling missing values...
 
 [3/3] Saving cleaned data...
-  [OK] Saved to: data/silver/events_clean.csv
+  [OK] Saved to: data\silver\events_clean.csv
 
 Cleaned data:
   - Rows: 500
@@ -79,7 +79,7 @@ Raw data:
   - Found 0 invalid ISBNs
 
 [4/4] Saving cleaned data...
-  [OK] Saved to: data/silver/catalogue_clean.csv
+  [OK] Saved to: data\silver\catalogue_clean.csv
 
 Cleaned data:
   - Rows: 5,000
@@ -95,7 +95,7 @@ Cleaned data:
   - Found 200 feedback entries
 
 [2/2] Saving processed feedback...
-  [OK] Saved to: data/silver/feedback_summary.csv
+  [OK] Saved to: data\silver\feedback_summary.csv
   - Processed 200 feedback entries
 
 ============================================================
@@ -103,15 +103,15 @@ Cleaned data:
 ============================================================
 
 [OK] Pipeline completed successfully!
-  - Duration: 0.94 seconds
+  - Duration: 0.88 seconds
   - Files processed: 4
-  - Output directory: data/silver
+  - Output directory: data\silver
 
 Cleaned files created:
-  - feedback_summary.csv
   - catalogue_clean.csv
   - circulation_clean.csv
   - events_clean.csv
+  - feedback_summary.csv
 
   [!] 4 warning(s) - review before submitting:
     [!] Circulation: remove_duplicates() left 100 duplicates unchanged - is it implemented?
