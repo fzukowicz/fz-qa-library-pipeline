@@ -2,7 +2,7 @@
 ============================================================
   LIBRARY DATA PIPELINE
   Starting pipeline execution...
-  Time: 2026-10-12 15:29:44
+  Time: 2026-10-13 11:45:44
 ============================================================
 
 ============================================================
@@ -18,7 +18,7 @@ Raw data:
   - Duplicates: 76
 
 [2/6] Removing duplicates...
-  - Removed 0 duplicate rows
+  - Removed 100 duplicate rows
 
 [3/6] Handling missing values...
   - Dropped rows with missing values
@@ -26,16 +26,16 @@ Raw data:
 [4/6] Standardising dates...
 
 [5/6] Cleaning ISBNs...
-  - Found 269 invalid ISBNs
+  - Found 0 invalid ISBNs
 
 [6/6] Saving cleaned data...
   [OK] Saved to: data\silver\circulation_clean.csv
 
 Cleaned data:
-  - Rows: 5,100
+  - Rows: 4,185
   - Columns: 7
-  - Missing values: 1,145
-  - Duplicates: 76
+  - Missing values: 423
+  - Duplicates: 0
 
 ============================================================
   Processing Events Data
@@ -55,9 +55,9 @@ Raw data:
   [OK] Saved to: data\silver\events_clean.csv
 
 Cleaned data:
-  - Rows: 500
+  - Rows: 457
   - Columns: 11
-  - Missing values: 43
+  - Missing values: 0
   - Duplicates: 0
 
 ============================================================
@@ -103,7 +103,7 @@ Cleaned data:
 ============================================================
 
 [OK] Pipeline completed successfully!
-  - Duration: 0.88 seconds
+  - Duration: 0.89 seconds
   - Files processed: 4
   - Output directory: data\silver
 
@@ -113,10 +113,8 @@ Cleaned files created:
   - events_clean.csv
   - feedback_summary.csv
 
-  [!] 4 warning(s) - review before submitting:
-    [!] Circulation: remove_duplicates() left 100 duplicates unchanged - is it implemented?
-    [!] Circulation: handle_missing_values() left 876 missing values unchanged - is it implemented?
-    [!] Events: handle_missing_values() left 43 missing values unchanged - is it implemented?
+  [!] 2 warning(s) - review before submitting:
+    [!] Circulation: validate_isbn() returned input unchanged for all 4,185 rows - is it implemented?
     [!] Catalogue: validate_isbn() returned input unchanged for all 5,000 rows - is it implemented?
 
 ============================================================
