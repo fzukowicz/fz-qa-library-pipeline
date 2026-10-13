@@ -4,21 +4,21 @@ rootdir: C:\Users\Admin\Desktop\fz-qa-library-pipeline
 configfile: pyproject.toml
 testpaths: tests
 plugins: anyio-4.3.0, Faker-40.43.0, cov-7.1.0
-collected 8 items
+collected 20 items
 
-tests\test_cleaning.py ...                                               [ 37%]
-tests\test_example.py .                                                  [ 50%]
-tests\test_ingestion.py ...                                              [ 87%]
-tests\test_validation.py .                                               [100%]
+tests\test_cleaning.py .....                                             [ 25%]
+tests\test_example.py .                                                  [ 30%]
+tests\test_ingestion.py ......                                           [ 60%]
+tests\test_validation.py ........                                        [100%]
 
 =============================== tests coverage ================================
 _______________ coverage: platform win32, python 3.12.3-final-0 _______________
 
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
-src\data_processing\cleaning.py        28     22    21%   17-25, 30-46, 51-61
-src\data_processing\ingestion.py       63     54    14%   24-48, 60-87, 111-139
-src\data_processing\validation.py      19     18     5%   11-41
+src\data_processing\cleaning.py        28      1    96%   44
+src\data_processing\ingestion.py       63     24    62%   42-48, 81-87, 123-125, 131-139
+src\data_processing\validation.py      19      1    95%   22
 -----------------------------------------------------------------
-TOTAL                                 110     94    15%
-============================== 8 passed in 1.53s ==============================
+TOTAL                                 110     26    76%
+============================= 20 passed in 3.44s ==============================
