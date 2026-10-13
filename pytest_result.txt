@@ -16,9 +16,9 @@ _______________ coverage: platform win32, python 3.12.3-final-0 _______________
 
 Name                                Stmts   Miss  Cover   Missing
 -----------------------------------------------------------------
-src\data_processing\cleaning.py        11      6    45%   19-20, 25-26, 31-32
-src\data_processing\ingestion.py       35     26    26%   27, 41-43, 67-95
-src\data_processing\validation.py       2      1    50%   18
+src\data_processing\cleaning.py        28     22    21%   17-25, 30-46, 51-61
+src\data_processing\ingestion.py       63     54    14%   24-48, 60-87, 111-139
+src\data_processing\validation.py      19     18     5%   11-41
 -----------------------------------------------------------------
-TOTAL                                  48     33    31%
-============================== 8 passed in 1.46s ==============================
+TOTAL                                 110     94    15%
+============================== 8 passed in 1.53s ==============================
