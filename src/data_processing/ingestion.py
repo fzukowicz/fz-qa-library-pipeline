@@ -4,7 +4,6 @@ TODO: Complete these functions for the library project.
 """
 
 import json
-
 import logging
 import pandas as pd
 from pathlib import Path
@@ -21,10 +20,32 @@ def load_csv(filepath):
 
     Returns:
         DataFrame with loaded data
-
-    TODO: Add error handling and logging
     """
-    return pd.read_csv(filepath)
+    filepath = Path(filepath)
+
+    # Check file exists
+    if not filepath.exists():
+        logger.error(f"CSV file not found: {filepath}")
+        raise FileNotFoundError(f"CSV file not found: {filepath}")
+
+    try:
+        logger.info(f"Loading CSV from {filepath}")
+
+        df = pd.read_csv(filepath)
+
+        logger.info(
+            f"Successfully loaded {len(df)} rows from {filepath}"
+        )
+
+        return df
+
+    except ValueError as e:
+        logger.error(f"Value error loading CSV {filepath}: {e}")
+        raise
+
+    except Exception as e:
+        logger.error(f"Error loading CSV {filepath}: {e}")
+        raise
 
 
 def load_json(filepath):
@@ -35,12 +56,35 @@ def load_json(filepath):
 
     Returns:
         DataFrame with flattened data
-
-    TODO: Implement JSON loading and flattening
     """
-    with open(filepath, "r") as f:
-        data = json.load(f)
-    return pd.json_normalize(data)
+    filepath = Path(filepath)
+
+    # Check file exists
+    if not filepath.exists():
+        logger.error(f"JSON file not found: {filepath}")
+        raise FileNotFoundError(f"JSON file not found: {filepath}")
+
+    try:
+        logger.info(f"Loading JSON from {filepath}")
+
+        with open(filepath, "r") as f:
+            data = json.load(f)
+
+        df = pd.json_normalize(data)
+
+        logger.info(
+            f"Successfully loaded {len(df)} rows from {filepath}"
+        )
+
+        return df
+
+    except ValueError as e:
+        logger.error(f"Value error loading JSON {filepath}: {e}")
+        raise
+
+    except Exception as e:
+        logger.error(f"Error loading JSON {filepath}: {e}")
+        raise
 
 
 def load_excel(filepath, sheet_name=0, **kwargs):
