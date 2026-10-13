@@ -2,7 +2,7 @@
 ============================================================
   LIBRARY DATA PIPELINE
   Starting pipeline execution...
-  Time: 2026-10-13 11:45:44
+  Time: 2026-10-13 12:17:22
 ============================================================
 
 ============================================================
@@ -103,7 +103,7 @@ Cleaned data:
 ============================================================
 
 [OK] Pipeline completed successfully!
-  - Duration: 0.89 seconds
+  - Duration: 0.94 seconds
   - Files processed: 4
   - Output directory: data\silver
 
@@ -112,10 +112,6 @@ Cleaned files created:
   - circulation_clean.csv
   - events_clean.csv
   - feedback_summary.csv
-
-  [!] 2 warning(s) - review before submitting:
-    [!] Circulation: validate_isbn() returned input unchanged for all 4,185 rows - is it implemented?
-    [!] Catalogue: validate_isbn() returned input unchanged for all 5,000 rows - is it implemented?
 
 ============================================================
   Next steps:
